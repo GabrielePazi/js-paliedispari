@@ -33,7 +33,6 @@ function add(num1, num2) {
   return num1 + num2;
 }
 
-
 /**
  * Effects: Ritorna true se il numero è pari, false altrimenti
  * 
@@ -46,7 +45,6 @@ function evenOrOdd(num) {
   }
   return false;
 }
-
 
 /**
  * Effect: 

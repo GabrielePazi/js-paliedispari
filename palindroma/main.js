@@ -4,9 +4,9 @@ btnCheck.addEventListener("click", function () {
     const userWord = document.querySelector(".input-word").value;
 
     if (isPalindrome(userWord)) {
-      document.querySelector(".message").innerHTML = "La parola " + word + " è palindroma";
+      document.querySelector(".message").innerHTML = "La parola " + userWord + " è palindroma";
     } else {
-      document.querySelector(".message").innerHTML = "La parola " + word + " NON è palindroma";
+      document.querySelector(".message").innerHTML = "La parola " + userWord + " NON è palindroma";
     }
   }
 )
@@ -34,8 +34,5 @@ function reverseString(word) {
  * @param {string} word 
  */
 function isPalindrome(word) {
-  if (word === reverseString(word)) {
-    return true;
-  }
-  return false;
+  return word === reverseString(word);
 }
