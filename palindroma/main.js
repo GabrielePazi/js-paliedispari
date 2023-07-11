@@ -3,12 +3,16 @@ let btnCheck = document.getElementById("check-btn");
 btnCheck.addEventListener("click", function () {
     const userWord = document.querySelector(".input-word").value;
 
-    isPalindrome(userWord);
+    if (isPalindrome(userWord)) {
+      document.querySelector(".message").innerHTML = "La parola " + word + " è palindroma";
+    } else {
+      document.querySelector(".message").innerHTML = "La parola " + word + " NON è palindroma";
+    }
   }
 )
 
 /**
- * Crea una stringa con le lettere della stringa in input invertite
+ * Crea una stringa con le lettere della stringa in input invertite. Es: "ciao"->"oaic"
  * 
  * @param {string} word 
  * @returns {string}
@@ -25,14 +29,13 @@ function reverseString(word) {
 
 
 /**
- * Se la parola è palindroma stampa "la parola è palindroma", altrimenti stampa "la parola NON è palindroma"
+ * Se la parola è palindroma ritorna true, altrimenti false
  * 
  * @param {string} word 
  */
 function isPalindrome(word) {
   if (word === reverseString(word)) {
-    document.querySelector(".message").innerHTML = "La parola " + word + " è palindroma";
-  } else {
-    document.querySelector(".message").innerHTML = "La parola " + word + " NON è palindroma";
+    return true;
   }
+  return false;
 }
